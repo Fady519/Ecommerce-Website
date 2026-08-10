@@ -5,10 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/src/img/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ecommerce</title>
+
+    <script>
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+
+    if (redirect) {
+      window.history.replaceState(
+        null,
+        "",
+        "/Ecommerce-Website" + decodeURIComponent(redirect)
+      );
+    }
+  })();
+</script>
+
     <script type="module" crossorigin src="/Ecommerce-Website/assets/index-BjkpxPzj.js"></script>
     <link rel="stylesheet" crossorigin href="/Ecommerce-Website/assets/index-B01x3h-o.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
